@@ -21,7 +21,7 @@ Step 2: Enable the Bundle
 -------------------------
 
 Then, enable the bundle by adding it to the list of registered bundles
-in the `app/AppKernel.php` file of your project:
+in the development section of the `app/AppKernel.php` file of your project:
 
 ```php
 <?php
@@ -32,13 +32,12 @@ class AppKernel extends Kernel
 {
     public function registerBundles()
     {
-        $bundles = array(
-            // ...
-
-            new Emarref\Bundle\XdebugBundle\EmarrefXdebugBundle(),
-        );
-
         // ...
+
+        if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+            // ...
+            $bundles[] = new Emarref\Bundle\XdebugBundle\EmarrefXdebugBundle();
+        }
     }
 
     // ...
