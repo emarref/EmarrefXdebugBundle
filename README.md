@@ -47,9 +47,11 @@ class AppKernel extends Kernel
 Step 3: Configure the bundle
 ----------------------------
 
-By default, the only required configuration is the IDE Key.
+Configure the bundle in your development environment. By default, the only
+required configuration is the IDE Key.
 
 ```yaml
+# app/config/config_dev.yml
 emarref_xdebug:
     debugger:
         idekey: MY_KEY
@@ -58,6 +60,7 @@ emarref_xdebug:
 Full default configuration is below:
 
 ```yaml
+# app/config/config_dev.yml
 emarref_xdebug:
     enabled: true
     debugger:
