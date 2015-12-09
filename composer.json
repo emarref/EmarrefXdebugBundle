@@ -1,0 +1,15 @@
+{
+    "name": "emarref/xdebug-bundle",
+    "description": "Simplify the use of a debugging tool in your IDE by automatically setting/removing cookies.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Malcolm Fell",
+            "email": "emarref@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    }
+}
